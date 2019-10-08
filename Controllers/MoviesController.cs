@@ -12,21 +12,30 @@ namespace Vidly.Controllers
     {
         // GET: Movies
         [HttpGet]
-        public ActionResult Random()
+        public ActionResult Index()
         {
-            Movie movie = new Movie() { Name="Ferdinand" } ;
-            List<Customer> customers = new List<Customer>
+            List<Movie> movies = new List<Movie>
             {
-                new Customer { Name="Customer 1" },
-                new Customer { Name="Customer 2"}
+                new Movie { Id=1, Name="Ferdinand" },
+                new Movie { Id=2, Name="Shrek"}
+            };
+            return View(movies);
+        }
+
+        [HttpGet]
+        public ActionResult Details(int id)
+        {
+            if (id != 1 && id != 2)
+            {
+                return HttpNotFound();
+            }
+            List<Movie> movies = new List<Movie>
+            {
+                new Movie { Id=1, Name="Ferdinand" },
+                new Movie { Id=2, Name="Shrek"}
             };
 
-            RandomViewModel viewModel = new RandomViewModel
-            {
-                Movie = movie,
-                Customers = customers
-            };
-            return View(viewModel);
+            return View(movies.FirstOrDefault(c => c.Id == id));
         }
     }
 }
