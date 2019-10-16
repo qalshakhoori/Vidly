@@ -191,9 +191,46 @@
     <Compile Include="Migrations\201910091050277_PopulateMembershipTypes.Designer.cs">
       <DependentUpon>201910091050277_PopulateMembershipTypes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201910151116478_ApplyAnnotationsToCustomerName.cs" />
+    <Compile Include="Migrations\201910151116478_ApplyAnnotationsToCustomerName.Designer.cs">
+      <DependentUpon>201910151116478_ApplyAnnotationsToCustomerName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910151118141_CapitalizeIsSubscribedToNewsLetter.cs" />
+    <Compile Include="Migrations\201910151118141_CapitalizeIsSubscribedToNewsLetter.Designer.cs">
+      <DependentUpon>201910151118141_CapitalizeIsSubscribedToNewsLetter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910160437040_RemoveMemberShipeTypeId.cs" />
+    <Compile Include="Migrations\201910160437040_RemoveMemberShipeTypeId.Designer.cs">
+      <DependentUpon>201910160437040_RemoveMemberShipeTypeId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910160500282_AddMembershipTypeName.cs" />
+    <Compile Include="Migrations\201910160500282_AddMembershipTypeName.Designer.cs">
+      <DependentUpon>201910160500282_AddMembershipTypeName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910160501132_InsertMembershipTypesNames.cs" />
+    <Compile Include="Migrations\201910160501132_InsertMembershipTypesNames.Designer.cs">
+      <DependentUpon>201910160501132_InsertMembershipTypesNames.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910160505084_InsertMembershipTypesNames1.cs" />
+    <Compile Include="Migrations\201910160505084_InsertMembershipTypesNames1.Designer.cs">
+      <DependentUpon>201910160505084_InsertMembershipTypesNames1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910160510316_AddBirthDate.cs" />
+    <Compile Include="Migrations\201910160510316_AddBirthDate.Designer.cs">
+      <DependentUpon>201910160510316_AddBirthDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910160528183_AddMoviesAndGenre.cs" />
+    <Compile Include="Migrations\201910160528183_AddMoviesAndGenre.Designer.cs">
+      <DependentUpon>201910160528183_AddMoviesAndGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910160529426_SeedGenre.cs" />
+    <Compile Include="Migrations\201910160529426_SeedGenre.Designer.cs">
+      <DependentUpon>201910160529426_SeedGenre.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
@@ -294,6 +331,33 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201910091050277_PopulateMembershipTypes.resx">
       <DependentUpon>201910091050277_PopulateMembershipTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910151116478_ApplyAnnotationsToCustomerName.resx">
+      <DependentUpon>201910151116478_ApplyAnnotationsToCustomerName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910151118141_CapitalizeIsSubscribedToNewsLetter.resx">
+      <DependentUpon>201910151118141_CapitalizeIsSubscribedToNewsLetter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910160437040_RemoveMemberShipeTypeId.resx">
+      <DependentUpon>201910160437040_RemoveMemberShipeTypeId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910160500282_AddMembershipTypeName.resx">
+      <DependentUpon>201910160500282_AddMembershipTypeName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910160501132_InsertMembershipTypesNames.resx">
+      <DependentUpon>201910160501132_InsertMembershipTypesNames.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910160505084_InsertMembershipTypesNames1.resx">
+      <DependentUpon>201910160505084_InsertMembershipTypesNames1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910160510316_AddBirthDate.resx">
+      <DependentUpon>201910160510316_AddBirthDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910160528183_AddMoviesAndGenre.resx">
+      <DependentUpon>201910160528183_AddMoviesAndGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910160529426_SeedGenre.resx">
+      <DependentUpon>201910160529426_SeedGenre.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
