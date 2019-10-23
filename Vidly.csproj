@@ -227,6 +227,70 @@
     <Compile Include="Migrations\201910160529426_SeedGenre.Designer.cs">
       <DependentUpon>201910160529426_SeedGenre.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201910220555228_AddMembershipTypes.cs" />
+    <Compile Include="Migrations\201910220555228_AddMembershipTypes.Designer.cs">
+      <DependentUpon>201910220555228_AddMembershipTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910220557445_RenameMembershiptype.cs" />
+    <Compile Include="Migrations\201910220557445_RenameMembershiptype.Designer.cs">
+      <DependentUpon>201910220557445_RenameMembershiptype.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910220740332_AddMemberShipTypeId.cs" />
+    <Compile Include="Migrations\201910220740332_AddMemberShipTypeId.Designer.cs">
+      <DependentUpon>201910220740332_AddMemberShipTypeId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910220823524_AddGenreId.cs" />
+    <Compile Include="Migrations\201910220823524_AddGenreId.Designer.cs">
+      <DependentUpon>201910220823524_AddGenreId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910220844138_ADDGenrestoApplicationDBContext.cs" />
+    <Compile Include="Migrations\201910220844138_ADDGenrestoApplicationDBContext.Designer.cs">
+      <DependentUpon>201910220844138_ADDGenrestoApplicationDBContext.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910220906462_ReleaseDateAndDateAddedNullable.cs" />
+    <Compile Include="Migrations\201910220906462_ReleaseDateAndDateAddedNullable.Designer.cs">
+      <DependentUpon>201910220906462_ReleaseDateAndDateAddedNullable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910220953309_removeGenreId.cs" />
+    <Compile Include="Migrations\201910220953309_removeGenreId.Designer.cs">
+      <DependentUpon>201910220953309_removeGenreId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910220955580_removeGenre.cs" />
+    <Compile Include="Migrations\201910220955580_removeGenre.Designer.cs">
+      <DependentUpon>201910220955580_removeGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910220957260_ReAddGenreandGenreId.cs" />
+    <Compile Include="Migrations\201910220957260_ReAddGenreandGenreId.Designer.cs">
+      <DependentUpon>201910220957260_ReAddGenreandGenreId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910221037184_RemoveRequiredFromGenreId.cs" />
+    <Compile Include="Migrations\201910221037184_RemoveRequiredFromGenreId.Designer.cs">
+      <DependentUpon>201910221037184_RemoveRequiredFromGenreId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910221039114_removeGenre1.cs" />
+    <Compile Include="Migrations\201910221039114_removeGenre1.Designer.cs">
+      <DependentUpon>201910221039114_removeGenre1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910221039563_addGenre.cs" />
+    <Compile Include="Migrations\201910221039563_addGenre.Designer.cs">
+      <DependentUpon>201910221039563_addGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910221044311_changeTobyteGenreModel.cs" />
+    <Compile Include="Migrations\201910221044311_changeTobyteGenreModel.Designer.cs">
+      <DependentUpon>201910221044311_changeTobyteGenreModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910221101349_requiredforGenre.cs" />
+    <Compile Include="Migrations\201910221101349_requiredforGenre.Designer.cs">
+      <DependentUpon>201910221101349_requiredforGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910230756416_MovieNameStringLength.cs" />
+    <Compile Include="Migrations\201910230756416_MovieNameStringLength.Designer.cs">
+      <DependentUpon>201910230756416_MovieNameStringLength.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910230759528_MovieReleaseDateNotNullable.cs" />
+    <Compile Include="Migrations\201910230759528_MovieReleaseDateNotNullable.Designer.cs">
+      <DependentUpon>201910230759528_MovieReleaseDateNotNullable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -234,10 +298,12 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
+    <Compile Include="Models\Min18YearsIfAMember.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
-    <Compile Include="ViewModels\RandomViewModel.cs" />
+    <Compile Include="ViewModels\CustomerFormViewModel.cs" />
+    <Compile Include="ViewModels\MovieFormViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-sketchy.css" />
@@ -302,6 +368,8 @@
     <Content Include="Views\Customers\Details.cshtml" />
     <Content Include="Views\Movies\Details.cshtml" />
     <Content Include="Views\Movies\Index.cshtml" />
+    <Content Include="Views\Customers\Form.cshtml" />
+    <Content Include="Views\Movies\Form.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -358,6 +426,54 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201910160529426_SeedGenre.resx">
       <DependentUpon>201910160529426_SeedGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910220555228_AddMembershipTypes.resx">
+      <DependentUpon>201910220555228_AddMembershipTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910220557445_RenameMembershiptype.resx">
+      <DependentUpon>201910220557445_RenameMembershiptype.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910220740332_AddMemberShipTypeId.resx">
+      <DependentUpon>201910220740332_AddMemberShipTypeId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910220823524_AddGenreId.resx">
+      <DependentUpon>201910220823524_AddGenreId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910220844138_ADDGenrestoApplicationDBContext.resx">
+      <DependentUpon>201910220844138_ADDGenrestoApplicationDBContext.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910220906462_ReleaseDateAndDateAddedNullable.resx">
+      <DependentUpon>201910220906462_ReleaseDateAndDateAddedNullable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910220953309_removeGenreId.resx">
+      <DependentUpon>201910220953309_removeGenreId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910220955580_removeGenre.resx">
+      <DependentUpon>201910220955580_removeGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910220957260_ReAddGenreandGenreId.resx">
+      <DependentUpon>201910220957260_ReAddGenreandGenreId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910221037184_RemoveRequiredFromGenreId.resx">
+      <DependentUpon>201910221037184_RemoveRequiredFromGenreId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910221039114_removeGenre1.resx">
+      <DependentUpon>201910221039114_removeGenre1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910221039563_addGenre.resx">
+      <DependentUpon>201910221039563_addGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910221044311_changeTobyteGenreModel.resx">
+      <DependentUpon>201910221044311_changeTobyteGenreModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910221101349_requiredforGenre.resx">
+      <DependentUpon>201910221101349_requiredforGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910230756416_MovieNameStringLength.resx">
+      <DependentUpon>201910230756416_MovieNameStringLength.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910230759528_MovieReleaseDateNotNullable.resx">
+      <DependentUpon>201910230759528_MovieReleaseDateNotNullable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
