@@ -1,11 +1,14 @@
-﻿using System.Data.Entity;
+﻿using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
+using System.Runtime.Caching;
 using System.Web.Mvc;
 using Vidly.Models;
 using Vidly.ViewModels;
 
 namespace Vidly.Controllers
 {
+    [Authorize(Roles = RoleNames.CanManageMovies)]
     public class CustomersController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -24,6 +27,10 @@ namespace Vidly.Controllers
         [HttpGet]
         public ActionResult Index()
         {
+            if (MemoryCache.Default["Geners"] == null)
+                MemoryCache.Default["Genres"] = _context.Genres.ToList();
+
+            var genres = MemoryCache.Default["Genres"] as IEnumerable<Genre>;
             return View();
         }
 
