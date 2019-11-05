@@ -1,4 +1,5 @@
-﻿using System.Web.Mvc;
+﻿using System;
+using System.Web.Mvc;
 
 namespace Vidly.Controllers
 {
@@ -14,9 +15,10 @@ namespace Vidly.Controllers
         [HttpGet]
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            throw new NotImplementedException();
+            //ViewBag.Message = "Your application description page.";
 
-            return View();
+            //return View();
         }
 
         [HttpGet]
